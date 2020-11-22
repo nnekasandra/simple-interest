@@ -7,29 +7,38 @@
 </head>
 <body>
     <h1>Simple Interest or Compound interest</h1>
-    <p>Joseph shoul go with Bank Two offer as it amount to repay back is cheaper</p>
+    <p>The client should go with the one my program alerts</p>
     <script>
-        var principal = 100000;
-        var time = 2;
-        var bankOneRate = 0.1;
+        var principal = window.prompt('Enter Principal');
+        var time = window.prompt('Input number of years');
+        var bankOneRate = 0.01;
         var bankTwoRate = 0.025;
         var noOfLoanRepayment = 12;
         
-        // calculation of simple interest
-        var simpleInterest = principal * bankOneRate *time;
+        // calculation of simple interest for bank one
+        var simpleInterest = principal * bankOneRate * time;
         console.log(simpleInterest)
 
-        // calculation of compound interest amount
-        var amount = principal * (1 + (bankTwoRate/noOfLoanRepayment))**(noOfLoanRepayment*time)
-        console.log(amount)
-
         // total amount paid choosing bank one 
-        var totalAmountBankOne = simpleInterest + principal;
+        var totalAmountBankOne = principal + simpleInterest ;
         console.log(totalAmountBankOne)
+
+        // calculation of compound interest and amount to be repayed for bank two
+        
+        var totalAmountBankTwo = principal * (1 + (bankTwoRate/noOfLoanRepayment))**(noOfLoanRepayment*time)
+        console.log(totalAmountBankTwo)
         
         // amount of interest on the compound interest should be 
-        var interestOnCompoundInterest = amount-principal;
+        var interestOnCompoundInterest =totalAmountBankTwo-principal;
         console.log(interestOnCompoundInterest)
+
+        if(totalAmountBankOne < totalAmountBankTwo && totalAmountBankTwo>totalAmountBankOne){
+            alert('Bank One is better it has the total amount of ' + totalAmountBankOne)
+        }else if(totalAmountBankTwo < totalAmountBankOne && totalAmountBankOne > totalAmountBankTwo){
+            alert('Bank Two is better! It has the total amount of ' + totalAmountBankTwo)
+        }else{
+            alert('Both banks offer the same rewards. Choose any one you feel like choosing')
+        }
     </script>
 </body>
 </html> 
