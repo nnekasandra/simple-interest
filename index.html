@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <h1>Simple Interest or Compound interest</h1>
+    <p>Joseph shoul go with Bank Two offer as it amount to repay back is cheaper</p>
+    <script>
+        var principal = 100000;
+        var time = 2;
+        var bankOneRate = 0.1;
+        var bankTwoRate = 0.025;
+        var noOfLoanRepayment = 12;
+        
+        // calculation of simple interest
+        var simpleInterest = principal * bankOneRate *time;
+        console.log(simpleInterest)
+
+        // calculation of compound interest amount
+        var amount = principal * (1 + (bankTwoRate/noOfLoanRepayment))**(noOfLoanRepayment*time)
+        console.log(amount)
+
+        // total amount paid choosing bank one 
+        var totalAmountBankOne = simpleInterest + principal;
+        console.log(totalAmountBankOne)
+        
+        // amount of interest on the compound interest should be 
+        var interestOnCompoundInterest = amount-principal;
+        console.log(interestOnCompoundInterest)
+    </script>
+</body>
+</html> 
