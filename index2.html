@@ -8,13 +8,17 @@
 <body>
     <h1>My Javascript tutorial</h1>
     <script>
-       var firstTerm = 0
-       var commonDifference = 3;
-       var lastTerm = parseFloat(prompt('Enter last term'))
-       var ap = firstTerm + (firstTerm+ 2*commonDifference) + (firstTerm + 3*commonDifference);
-        for (var i = firstTerm; i<= lastTerm; i++){
-             console.log(ap)
-        }
+       var firstTerm = parseFloat(prompt('First Term'))
+       var commonDifference = parseFloat(prompt('Common Difference'));
+       var maximumValue = parseFloat(prompt('maximum value:'))
+       var nextterm = firstTerm + commonDifference;
+       var lastTerm = firstTerm + (nextterm*commonDifference)
+       var series = [firstTerm,firstTerm+(1*commonDifference),firstTerm+(2*commonDifference)];
+       while(lastTerm < maximumValue){
+        series.push(nextterm)
+        i++
+       }
+       document.write(series)
     </script>
 </body>
 </html>
