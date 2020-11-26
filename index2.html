@@ -12,11 +12,11 @@
        var commonDifference = parseFloat(prompt('Common Difference'));
        var maximumValue = parseFloat(prompt('maximum value:'))
        var nextterm = firstTerm + commonDifference;
-       var lastTerm = firstTerm + (nextterm*commonDifference)
-       var series = [firstTerm,firstTerm+(1*commonDifference),firstTerm+(2*commonDifference)];
-       while(lastTerm < maximumValue){
+       var series = [firstTerm];
+       series.push(nextterm)
+       while(nextterm + commonDifference <= maximumValue){
+        nextterm += commonDifference
         series.push(nextterm)
-        i++
        }
        document.write(series)
     </script>
