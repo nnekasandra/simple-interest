@@ -19,6 +19,10 @@
         series.push(nextterm)
        }
        document.write(series)
+       const seriesAddition = series.reduce(function(result, item){
+           return result + item
+       })
+       document.write('The sum of the numbers in the series is ' + seriesAddition)
     </script>
 </body>
 </html>
