@@ -7,35 +7,23 @@
 </head>
 <body>
     <script>
-        let studentRecord = [
-            {
-                name: 'Precious Nwosu',
-                department: 'Agric',
-                level: '200l'
-        },
-        {
-                name: 'Steven Peters',
-                department: 'Maths',
-                level: '400l' 
-        },
-        {
-            name: 'Sansa Patrick',
-            department:'Soil Science',
-            level: '500l'
+        let studentRecord = []
+        let record = {
+            name: prompt('Student Name'),
+            department: prompt('Department'),
+            level: prompt('Level')
         }
-        {
-            name: 'Joy Samuel',
-            department:'English',
-            level:'200l'
+        studentRecord.push(record)
+        while(studentRecord.length >= 5 ){
+            record = {
+            name: prompt('Student Name'),
+            department: prompt('Department'),
+            level: prompt('Level')
         }
-        {
-            name: 'Simon Sharon',
-            department: 'Physics',
-            level:'400l'
+            studentRecord.push(record)
+            record++
         }
-
-    ]
-    console.log(studentRecord)
+        console.log(studentRecord)  
     </script>
 </body>
 </html>
