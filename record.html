@@ -8,12 +8,6 @@
 <body>
     <script>
         let studentRecord = []
-        let record = {
-            name: prompt('Student Name'),
-            department: prompt('Department'),
-            level: prompt('Level')
-        }
-        studentRecord.push(record)
         while(studentRecord.length <= 5 ){
             record = {
             name: prompt('Student Name'),
@@ -22,7 +16,10 @@
         }
             studentRecord.push(record)
         }
-        console.log(studentRecord)  
+        console.log(studentRecord) 
+        studentRecord.forEach(function(object){
+            document.write(object)
+        }) 
     </script>
 </body>
 </html>
