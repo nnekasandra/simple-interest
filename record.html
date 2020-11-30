@@ -14,14 +14,13 @@
             level: prompt('Level')
         }
         studentRecord.push(record)
-        while(studentRecord.length >= 5 ){
+        while(studentRecord.length <= 5 ){
             record = {
             name: prompt('Student Name'),
             department: prompt('Department'),
             level: prompt('Level')
         }
             studentRecord.push(record)
-            record++
         }
         console.log(studentRecord)  
     </script>
