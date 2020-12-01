@@ -7,18 +7,19 @@
 </head>
 <body>
     <script>
-        let studentRecord = []
-        while(studentRecord.length <= 5 ){
+        let studentRecord = [];
+        let numberOfRecords = parseInt(prompt('How many data do you want to enter'));
+        for(var i = 0; i<=numberOfRecords; i++){
             record = {
             name: prompt('Student Name'),
             department: prompt('Department'),
             level: prompt('Level')
-        }
-            studentRecord.push(record)
+         }
+             studentRecord.push(record)
         }
         console.log(studentRecord) 
         studentRecord.forEach(function(object){
-            document.write(object)
+            document.write(' name of student: ' + object.name,' Department: ' + object.department , ' level: ' + object.level)
         }) 
     </script>
 </body>
