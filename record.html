@@ -8,16 +8,21 @@
 <body>
     <script>
         let studentRecord = [];
+        // prompt to the user how many data they want to input.
         let numberOfRecords = parseInt(prompt('How many data do you want to enter'));
+        
+        // use the number of input to calculate how many times the prompt will show up
+
         for(var i = 1; i<=numberOfRecords; i++){
             record = {
             name: prompt('Student Name'),
             department: prompt('Department'),
             level: prompt('Level')
-         }
+            }
              studentRecord.push(record)
         }
         console.log(studentRecord) 
+        // write each items inputed to the document
         studentRecord.forEach(function(object){
             document.write(' name of student: ' + object.name,' Department: ' + object.department , ' level: ' + object.level)
         }) 
