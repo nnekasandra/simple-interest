@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Logic Operators</title>
+  </head>
+  <body>
+    <h3>A program meant for Sandra from ogun state</h3>
+    <script type="text/javascript">
+      /* A program that tests for some certain conditions before allowing users into the app using logic Operators*/
+      let name = prompt('Your Name:') //This prompts the user to input their name and is stored in the name variable holding a string datatype
+      let age = parseInt(prompt('Your Age:')) // promts the user to input their age, converts it to a number datatype stored in the age variable
+      let gender = prompt('Your Gender:') //This prompts the user to input their gender and is stored in the gender variable holding a string datatype
+      let state = prompt('Your State:') //This prompts the user to input their state and is stored in the state variable holding a string datatype
+      if (name == 'Sandra' && gender == 'female' && age == 20 || state == 'ogun') {
+        // if statement checks for name that is equal to Sandra and gender that is equal to female and age that is equal to 20 or state that is equal to ogun
+        alert('Welcome my sweet pawpaw, and my tomato ogun state') //alerts this message for the user that passes the conditions of the if statement
+      } else {
+        //else block runs when the conditions of if statement is not met
+        alert('Get out of here') // alerts this message for the user that does not pass the condition of if statement
+      }
+    </script>
+  </body>
+</html>
